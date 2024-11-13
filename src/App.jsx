@@ -1,13 +1,20 @@
-import './style/App.css';
+import { useState } from 'react';
+import {Header} from './components/Header'
 
-import Header from './components/Header.jsx';
+const headerLinks = [
+    ['Home', '#home'],
+    ['Contact', '#contact']
+];
 
-function App() {
+export const App = () => {
+    const [activeLink, setAcrtiveLink] = useState(null);
+    const handleLinkClick = (index) => {
+        setAcrtiveLink(index);
+    };
+
     return (
         <>
-            <Header/>
+            <Header links={headerLinks} activeLink={activeLink} handleActiveLink={handleLinkClick}/>
         </>
     );
 }
-
-export default App;
