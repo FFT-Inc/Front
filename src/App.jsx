@@ -2,8 +2,10 @@ import { useState } from 'react';
 import {Header} from './components/Header'
 
 const headerLinks = [
-    ['Home', '#home'],
-    ['Contact', '#contact']
+    ['Home', 'home'],
+    ['Freelance', 'freelance'],
+    ['Customer', 'customer'],
+    ['Contact', 'contact']
 ];
 
 export const App = () => {

@@ -14,6 +14,8 @@ export const Header = ({links, activeLink, handleActiveLink}) => {
                 {links.map(([title, link], index) => {
                     return <li className={`m-7 text-lg`}><a className={activeLink === index ? 'font-bold' : 'font-normal'} href={link} onClick={() => handleActiveLink(index)}>{title}</a></li>;
                 })}
+                <li className={`m-7 text-lg underline`}><a href='login'>Login</a></li>
+                <li><a className={`m-7 text-lg text-fft-green border-2 border-solid border-fft-green`} href='signup'>Sign up</a></li>
             </ul>
         </header>
     );
